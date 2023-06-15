@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//API Tampil Data
+Route::get('/pelamar/read','EdutaAPIController@read');
+//API Create Data
+Route::POST('/pelamar/create','EdutaAPIController@create');
+//API delete Data
+Route::delete('/pelamar/delete/{id}','EdutaAPIController@delete');
+//API Update Data
+Route::POST('/pelamar/update/{id}','EdutaAPIController@update');
